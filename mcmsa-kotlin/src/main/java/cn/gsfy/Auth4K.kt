@@ -58,8 +58,6 @@ class MinecraftAuthentication {
         private const val CLIENT_ID = "4a07b708-b86d-4365-a55f-f4f23ecb85ab"
         private const val REDIRECT_URI = "http://localhost:3000/proxy/"
         private const val SCOPE = "XboxLive.signin offline_access"
-
-        // OAuth endpoints
         private const val AUTHORIZE_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize"
         private const val TOKEN_URL = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
         private const val XBL_AUTH_URL = "https://user.auth.xboxlive.com/user/authenticate"
@@ -67,8 +65,6 @@ class MinecraftAuthentication {
         private const val MC_LOGIN_URL = "https://api.minecraftservices.com/authentication/login_with_xbox"
         private const val MC_ENTITLEMENTS_URL = "https://api.minecraftservices.com/entitlements/mcstore"
         private const val PROFILE_URL = "https://api.minecraftservices.com/minecraft/profile"
-
-        // PKCE - 使用固定值
         private const val FIXED_CODE_VERIFIER = "W6i3P9qL8zX2rV5sT1uY4aB7cD0eF3gH6jK9mN2pQ5s"
         private const val CODE_VERIFIER = FIXED_CODE_VERIFIER
         private val CODE_CHALLENGE = generateCodeChallenge(CODE_VERIFIER)
