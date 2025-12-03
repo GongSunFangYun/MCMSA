@@ -1,12 +1,8 @@
-// Minecraft Authentication Script - Node.js Version
-// Standardized with English comments and messages
-
 const express = require('express');
 const crypto = require('crypto');
 const querystring = require('querystring');
-const { v4: uuidv4 } = require('uuid');
 const axios = require('axios');
-const readline = require('readline');
+require('readline');
 
 // Configuration
 const CLIENT_ID = '4a07b708-b86d-4365-a55f-f4f23ecb85ab';
@@ -28,9 +24,6 @@ const CODE_CHALLENGE = generateCodeChallenge(CODE_VERIFIER);
 
 const app = express();
 const port = 3000;
-
-// Store authentication data
-let authData = null;
 
 // Handle OAuth callback
 app.get('/proxy/', async (req, res) => {
@@ -63,45 +56,44 @@ app.get('/proxy/', async (req, res) => {
             console.log('[6/6] Getting Minecraft profile...');
             const profile = await getMinecraftProfile(mcAccessToken);
 
-            // Use player UUID as path name
-            const playerUUID = profile.id;
-            const dataEndpoint = `/data/${playerUUID}.json`;
-
-            // Store data
-            authData = {
+            // Build authentication result object
+            const authResult = {
+                timestamp: new Date().toISOString(),
+                player: {
+                    id: profile.id,
+                    name: profile.name
+                },
                 tokens: {
-                    microsoft_access_token: accessToken,
-                    microsoft_refresh_token: tokenData.refresh_token,
-                    xbl_token: xblToken,
-                    xsts_token: xstsToken,
-                    minecraft_access_token: mcAccessToken,
-                    expires_in: mcTokenData.expires_in,
+                    microsoft: {
+                        access_token: accessToken,
+                        refresh_token: tokenData.refresh_token,
+                        expires_in: tokenData.expires_in,
+                        scope: tokenData.scope
+                    },
+                    xbox: {
+                        xbl_token: xblToken,
+                        xsts_token: xstsToken
+                    },
+                    minecraft: {
+                        access_token: mcAccessToken,
+                        expires_in: mcTokenData.expires_in
+                    }
                 },
                 profile: profile,
                 pkce: {
                     code_verifier: CODE_VERIFIER,
-                    code_challenge: CODE_CHALLENGE,
-                },
+                    code_challenge: CODE_CHALLENGE
+                }
             };
 
-            // Add data endpoint route
-            app.get(dataEndpoint, (req, res) => {
-                if (authData) {
-                    res.json(authData);
-                } else {
-                    res.status(404).send('Data not found or expired');
-                }
-            });
-
-            console.log('\nDone.');
-            console.log('\nData access URL:');
-            console.log(`http://localhost:${port}${dataEndpoint}`);
-            console.log('Press Enter to exit, or keep server running to access data');
+            // Output authentication results to console
+            console.log('\n--- AUTHENTICATION DATA ---');
+            console.log(JSON.stringify(authResult, null, 2));
 
             res.send('Authentication successful! Please check console for results.');
 
             // Setup key press exit
-            setupKeyPressExit();
+            processExit();
 
         } catch (error) {
             console.error('Authentication failed:', error.response ? JSON.stringify(error.response.data) : error.message);
@@ -113,20 +105,8 @@ app.get('/proxy/', async (req, res) => {
 });
 
 // Setup key press exit
-function setupKeyPressExit() {
-    if (process.stdin.isTTY) {
-        const rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-        });
-
-        console.log('\nPress Enter to exit...');
-        rl.on('line', () => {
-            console.log('Exiting program');
-            rl.close();
-            process.exit(0);
-        });
-    }
+function processExit() {
+    process.exit(0);
 }
 
 // Start server

@@ -1,7 +1,3 @@
-// Minecraft Authentication Script - C++ Version
-// Standardized with English comments and messages
-// Requires: cpp-httplib, nlohmann/json, OpenSSL
-
 #include <iostream>
 #include <string>
 #include <thread>
