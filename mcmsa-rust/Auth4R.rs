@@ -1,4 +1,3 @@
-// main.rs
 use reqwest::blocking::Client;
 use reqwest::header;
 use serde::{Deserialize, Serialize};
