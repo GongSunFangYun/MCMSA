@@ -6,7 +6,7 @@
 [![Forks](https://img.shields.io/github/forks/GongSunFangYun/MCMSA?style=flat-square)]()
 [![Issues](https://img.shields.io/github/issues/GongSunFangYun/MCMSA?style=flat-square)]()
 [![License](https://img.shields.io/github/license/GongSunFangYun/MCMSA?style=flat-square)]()
-![简体中文支持](https://img.shields.io/badge/MULTI-LANG-ff8c00?style=flat-square&labelColor=ff8c00&color=ffd700)
+![简体中文支持](https://img.shields.io/badge/Multi-Lang-ff8c00?style=flat-square&labelColor=ff8c00&color=ffd700)
 
 A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.  
 You can reference this project as a third-party library in your project—because all the processes are automated! You only need to handle variable assignments and method calls!  
