@@ -1,5 +1,13 @@
 # MCMSA[Minecraft Microsoft Authentication]
 
+[![GitHub release](https://img.shields.io/github/v/release/GongSunFangYun/MCMSA?style=flat-square)]()
+[![Downloads](https://img.shields.io/github/downloads/GongSunFangYun/MCMSA/total?style=flat-square)]()
+[![Stars](https://img.shields.io/github/stars/GongSunFangYun/MCMSA?style=flat-square)]()
+[![Forks](https://img.shields.io/github/forks/GongSunFangYun/MCMSA?style=flat-square)]()
+[![Issues](https://img.shields.io/github/issues/GongSunFangYun/MCMSA?style=flat-square)]()
+[![License](https://img.shields.io/github/license/GongSunFangYun/MCMSA?style=flat-square)]()
+![简体中文支持](https://img.shields.io/badge/MULTI-LANG-ff8c00?style=flat-square&labelColor=ff8c00&color=ffd700)
+
 A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.  
 You can reference this project as a third-party library in your project—because all the processes are automated! You only need to handle variable assignments and method calls!  
 Emm... As for example code on how to use these 'libraries,' please run the project written in the corresponding language and go through the full standard DCF process before checking.  
