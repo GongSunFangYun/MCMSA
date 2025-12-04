@@ -1,4 +1,4 @@
-# Auth4 - Multi-Language Minecraft Authentication Library
+# MCMSA[Minecraft Microsoft Authentication]
 
 A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.
 
