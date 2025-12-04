@@ -3,7 +3,8 @@
 A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.  
 You can reference this project as a third-party library in your project—because all the processes are automated! You only need to handle variable assignments and method calls!  
 Emm... As for example code on how to use these 'libraries,' please run the project written in the corresponding language and go through the full standard DCF process before checking.  
-This project will absolutely not collect any user account data. The Azure application used by the project is just a shell program and does not contain any actual functionality!
+This project will absolutely not collect any user account data! The Azure application used by the project is just a empty program and does not contain any actual functionality!
+
 ## Supported Languages
 
 | Language | Directory | Build Tool |
