@@ -1,0 +1,12 @@
+{
+    "name": "gsfy/auth4php",
+    "description": "Minecraft authentication in PHP",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Auth4PHP\\": "src/"
+        }
+    }
+}

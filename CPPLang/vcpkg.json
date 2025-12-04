@@ -1,0 +1,9 @@
+{
+  "name": "Auth4CPP",
+  "version": "1.0.0",
+  "description": "Minecraft authentication library in CPP",
+  "dependencies": [
+    "curl",
+    "jansson"
+  ]
+}

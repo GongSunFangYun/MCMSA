@@ -1,0 +1,9 @@
+{
+  "name": "Auth4C",
+  "version": "1.0.0",
+  "description": "Minecraft authentication library in C",
+  "dependencies": [
+    "curl",
+    "jansson"
+  ]
+}
