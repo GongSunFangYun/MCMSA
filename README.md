@@ -35,7 +35,7 @@ You can reference this project as a third-party library in your project—becaus
 - **Error Handling** - Comprehensive error handling and retry mechanisms
 
 ### **Technical Features**
-- **Multi-Language Support** - Same functionality implemented in 13+ programming languages
+- **Multi-Language Support** - Same functionality implemented in 12+ programming languages
 - **Language Idioms** - Each implementation follows its language's best practices and conventions
 - **Dependency Management** - Proper package management for each ecosystem
 - **Build Automation** - Complete build scripts and configuration files
