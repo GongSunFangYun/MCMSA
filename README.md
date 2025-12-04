@@ -1,2 +1,119 @@
-# MCMSA[Minecraft Microsoft Authentication]
-An experimental multilingual library for implementing Minecraft Microsoft authentication.
+# Auth4 - Multi-Language Minecraft Authentication Library
+
+A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.
+
+## Supported Languages
+
+| Language | Directory | Build Tool |
+|----------|-----------|------------|
+| **Java** | `Java/` | Maven |
+| **Kotlin** | `Kotlin/` | Maven |
+| **C** | `CLang/` | CMake + vcpkg |
+| **C++** | `CPPLang/` | CMake + vcpkg |
+| **C#** | `CSharp/` | .NET SDK |
+| **Python** | `Python/` | pip |
+| **JavaScript** | `JavaScript/` | npm |
+| **TypeScript** | `TypeScript/` | npm |
+| **Go** | `GoLang/` | go mod |
+| **Rust** | `Rust/` | cargo |
+| **PHP** | `PHP/` | composer |
+| **VB.NET** | `VBNET/` | .NET SDK |
+| **Swift** | `Swift/` | Swift Package Manager |
+
+## Features
+
+### **Core Features**
+- **Device Code Flow Authentication** - Secure Microsoft OAuth 2.0 authentication without storing credentials
+- **Full Authentication Chain** - Complete Microsoft → Xbox Live → Minecraft authentication pipeline
+- **Cross-Platform** - Works on Windows, macOS, Linux, and any platform supporting the language
+- **Unified Output Format** - Consistent JSON output across all language implementations
+
+### **Security Features**
+- **No Password Storage** - Uses OAuth device code flow for secure authentication
+- **Token Management** - Handles access tokens, refresh tokens, and token expiration
+- **Secure HTTP Communication** - All implementations use HTTPS with proper TLS
+- **Error Handling** - Comprehensive error handling and retry mechanisms
+
+### **Technical Features**
+- **Multi-Language Support** - Same functionality implemented in 13+ programming languages
+- **Language Idioms** - Each implementation follows its language's best practices and conventions
+- **Dependency Management** - Proper package management for each ecosystem
+- **Build Automation** - Complete build scripts and configuration files
+
+### **Authentication Flow**
+1. **Device Code Request** - Get device code from Microsoft
+2. **User Verification** - User visits Microsoft site and enters code
+3. **Token Polling** - Automatically polls for Microsoft access token
+4. **Xbox Live Auth** - Convert Microsoft token to Xbox Live token
+5. **XSTS Auth** - Get XSTS token for Minecraft services
+6. **Minecraft Login** - Authenticate with Minecraft services
+7. **Profile Fetch** - Retrieve Minecraft player profile and skins
+
+### **Data Features**
+- **Profile Information** - UUID, username, skins, capes
+- **Token Storage** - Microsoft, Xbox Live, XSTS, and Minecraft tokens
+- **Expiration Tracking** - Token expiration times and refresh capability
+- **Skin Details** - Full skin metadata including texture URLs and variants
+
+### **Developer Features**
+- **Consistent API** - Same method signatures across all implementations
+- **Comprehensive Error Handling** - Detailed error messages and recovery
+- **Logging** - Step-by-step progress logging
+- **Example Code** - Ready-to-use example code in each language
+- **Configuration** - Easy to configure client ID and scopes
+
+### **Platform Features**
+- **HTTP Client Integration** - Uses each language's native or standard HTTP library
+- **JSON Processing** - Native JSON handling in each language
+- **Async/Concurrent** - Asynchronous implementations where supported
+- **Timeout Management** - Configurable timeouts for network operations
+- **Retry Logic** - Automatic retry for transient failures
+
+### **Performance Features**
+- **Connection Pooling** - Efficient HTTP connection reuse
+- **Memory Efficient** - Stream-based JSON processing where available
+- **Fast Polling** - Optimized polling intervals for quick authentication
+- **Parallel Processing** - Concurrent operations where applicable
+
+### **Maintenance Features**
+- **Version Management** - Clear dependency versioning
+- **Build Scripts** - Automated build and test scripts
+- **Documentation** - Comprehensive inline and external documentation
+- **Code Organization** - Clean, maintainable code structure
+- **Cross-Validation** - All implementations produce identical results
+
+### **Use Case Features**
+- **Minecraft Launchers** - Integration into custom Minecraft launchers
+- **Server Management** - Automated authentication for server tools
+- **Bot Development** - Authentication for Minecraft bots and automation
+- **Educational Purpose** - Learn authentication flows in multiple languages
+- **Library Development** - Foundation for building Minecraft-related libraries
+
+### **Output Features**
+```json
+{
+  "tokens": {
+    "microsoft_access_token": "eyJ0eXAiOiJKV1Qi...",
+    "microsoft_refresh_token": "0.AYcA1vzX5jy8kLp2...",
+    "xbl_token": "eyJhbGciOiJSUzI1NiIs...",
+    "xsts_token": "eyJhbGciOiJSUzI1NiIs...",
+    "minecraft_access_token": "eyJraWQiOiJhYzg0YS...",
+    "expires_in": 86400
+  },
+  "profile": {
+    "id": "4566e69fc9...",
+    "name": "PlayerName",
+    "skins": [
+      {
+        "id": "b0a1c6f7-8d4e-4f3a-9c2b-...",
+        "state": "ACTIVE",
+        "url": "https://textures.minecraft.net/texture/...",
+        "textureKey": "skin",
+        "variant": "CLASSIC"
+      }
+    ],
+    "capes": [],
+    "profileActions": {}
+  }
+}
+```
