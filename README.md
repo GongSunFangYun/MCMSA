@@ -1,6 +1,7 @@
 # MCMSA[Minecraft Microsoft Authentication]
 
 A cross-platform Minecraft Microsoft authentication library implemented in multiple programming languages, supporting device code flow authentication.
+You can even reference this project as a library—because all the processes are automated! You only need to handle the final JSON! (There are even sample codes for every language!)
 
 ## Supported Languages
 
@@ -18,7 +19,6 @@ A cross-platform Minecraft Microsoft authentication library implemented in multi
 | **Rust** | `Rust/` | cargo |
 | **PHP** | `PHP/` | composer |
 | **VB.NET** | `VBNET/` | .NET SDK |
-| **Swift** | `Swift/` | Swift Package Manager |
 
 ## Features
 
