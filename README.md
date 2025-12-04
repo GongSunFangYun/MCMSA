@@ -75,13 +75,6 @@ You can reference this project as a third-party library in your project—becaus
 - **Fast Polling** - Optimized polling intervals for quick authentication
 - **Parallel Processing** - Concurrent operations where applicable
 
-### **Maintenance Features**
-- **Version Management** - Clear dependency versioning
-- **Build Scripts** - Automated build and test scripts
-- **Documentation** - Comprehensive inline and external documentation
-- **Code Organization** - Clean, maintainable code structure
-- **Cross-Validation** - All implementations produce identical results
-
 ### **Use Case Features**
 - **Minecraft Launchers** - Integration into custom Minecraft launchers
 - **Server Management** - Automated authentication for server tools
