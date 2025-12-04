@@ -42,7 +42,6 @@ If you don't trust this empty Azure application... please register your own appl
 ### **Security Features**
 - **No Password Storage** - Uses OAuth device code flow for secure authentication
 - **Token Management** - Handles access tokens, refresh tokens, and token expiration
-- **Secure HTTP Communication** - All implementations use HTTPS with proper TLS
 - **Error Handling** - Comprehensive error handling and retry mechanisms
 
 ### **Technical Features**
