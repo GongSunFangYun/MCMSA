@@ -19,9 +19,9 @@ This project will absolutely not collect any user account data! The Azure applic
 |----------|-----------|------------|
 | **Java** | `Java/` | Maven |
 | **Kotlin** | `Kotlin/` | Maven |
-| **C** | `CLang/` | CMake + vcpkg |
-| **C++** | `CPPLang/` | CMake + vcpkg |
-| **C#** | `CSharp/` | .NET SDK |
+| **C** | `C/` | CMake + vcpkg |
+| **C++** | `CPP/` | CMake + vcpkg |
+| **C#** | `C#/` | .NET SDK |
 | **Python** | `Python/` | pip |
 | **JavaScript** | `JavaScript/` | npm |
 | **TypeScript** | `TypeScript/` | npm |
